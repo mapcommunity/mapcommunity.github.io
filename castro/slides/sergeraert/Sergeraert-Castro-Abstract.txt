@@ -1,0 +1,33 @@
+
+Abstracts of F. Sergeraert's Castro-Urdiales talks.
+
+A tutorial about "Constructive Algegraic Topology" was required.
+The subject has been naturally divided into four parts.
+
+Castro-1: Combinatorial  Topology.  The standard  simplicial complexes
+  are not enough for good algebraic topology, the so-called simplicial
+  *sets* are necessary. Castro-1  is an expository presentation of the
+  subject with the simplest examples. For serious references, question
+  Google  with  "Peter May  simplicial  objects"  and "Goerss  Jardine
+  simplicial theory".
+
+Castro-2.   Homological  algebra.  Devoted  to  *one* typical  example
+  explaining why  standard homological algebra is  not effective.  The
+  best  reference  for  elementary  homological  algebra  probably  is
+  MacLane, "Homological Algebra".  The talk terminates with the subtle
+  definitions of effective chain complexes and locally effective chain
+  complexes.
+
+Castro-3. Effective  homology. Combining the notions  of effective and
+  locally   effective  chain  complexes,   and  the   so-called  Basic
+  Perturbation Lemma,  an easy and efficient solution  is obtained for
+  Constructive Algebraic topology. The simple example of the effective
+  homology version of  the Serre spectral sequence is  used.  See also
+  Google(Rubio  Sergeraert  Bulletin)  in  which  other  more  precise
+  references can be obtained.
+
+Castro-4.   An  informal exposition  about  the  hard but  interesting
+  problems  which are met  when the  theoretical methods  of effective
+  homology  are to  be  *concretely* implemented  on  a computer.  The
+  programming  context is  quite new  and leads  to  numerous exciting
+  problems.

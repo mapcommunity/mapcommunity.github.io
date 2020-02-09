@@ -1,0 +1,931 @@
+
+
+
+<h2>Constructive Algebra and Verification</h2>
+
+<h3>Thierry Coquand&nbsp;&nbsp;Henri Lombardi
+&nbsp;&nbsp;Marie-Fran&ccedil;oise Roy</h3>
+
+<h3>5-10 january, 2003</h3>
+
+<h3>Place</h3>
+<p>
+The meeting took place in the <a href="http://www.dagstuhl.de/">
+Schloss Dagstuhl</a>. It was the seminar Nº03021, and it has <a
+href="http://www.dagstuhl.de/03021">a web page in Dagstuhl</a>.
+You'll find there a complete list of participants and a group 
+picture.
+
+<h3>General Presentation</h3>
+
+<p>
+The meeting was an attempt to bring together people from different
+communities: constructive algebra, computer algebra, designers and
+users of proof systems. Though the goals and interests are distinct,
+the meeting revealed that there is a strong core of common interests,
+the main one maybe the shared desire to understand in depth
+mathematics concepts in connections with algorithms and proofs. An
+interaction appears thus to be possible and fruitful.  One outcome of
+this week was the decision to create a European group under the
+acronym MAP for "Mathematics, Algorithms, Proofs".  As we said in
+our proposal: "If there is enough common interests and good
+interactions during the week, the Dagstuhl seminar could be the
+starting point of a european proposal on the same topic, with more
+ambitious goals." This is indeed what happened.
+<p>
+We would like at this point to thank the team of Schloss Dagtuhl.  The
+exceptional working conditions we enjoyed there played an important
+r&ocirc;le in the success of the meeting.
+<p>
+
+
+<h3>Summary of the meeting</h3>
+
+<p>
+Here are some common themes that emerged in the meeting on
+constructive algebra and verifications. There is no attempt
+to be exhaustive.
+
+<h4>Certificates</h4>
+
+<p> 
+A first common theme that emerged can be captured by the notion of
+"certificate", and was exposed clearly by the talk of Arjeh Cohen.
+This notion unifies some attempts to connect proof systems and
+computer algebra systems, that were the topic of the talks of <a
+href="#pottier">Loic Pottier</a> and <a
+href="#delahaye">David Delahaye</a>. The idea
+is roughly that computer algebra should communicate mathematical data
+together with a <i> certificate</i>, which represents the information
+needed to complete a proof of correctness of the mathematical
+data. This notion is reminiscent of the difference <i>NP/P</i>: it may
+be hard to check that a formula is a tautology but it is easy to check
+a proof. A simple example is provided by the gcd of two polynomials
+<i>P</i> and <i>Q</i>. The computer system should communicate not only
+the answer <i>G</i>, but also a certificate, that may be four
+polynomials <i>A,B,C,D</i> such that <i>AP+BQ = G, P=CG, Q=DG.</i> To
+find <i>G</i> may be hard, but to check these equalities is easy. A
+more sophiscated example was the topic of the talk of Loic Pottier
+(special cases of quantifier eliminations for reals), who had to
+program in CAML his own version of a computer algebra algorithm in
+order to get the desired certificates.
+
+<p>
+This notion of certificate is also closely connected to the talk of <a
+href="#schwichtenberg">Helmut Schwichtenberg</a> (common
+to all interactive proof systems with explicit proof objects): a
+starting point of such work is that while it is undecidable in general
+whether a given program meets its specification.  In contrast, it can
+be checked easily by a machine whether a formal proof is correct. The
+proof object itself can thus then be used as a certificate.
+
+ <p>
+It is curious that a similar notion of certificate was used in the
+talk of <a href="#pasechnik">Dmitrii
+Pasechnik</a>. There, of course, the goal is completely different,
+which is to provide interesting strong propositional proof systems
+with lower bound results.  Finally, the talk of Laureano Gonzalez-Vega
+was concerned on the difficulty of computing algebraic certificates in
+some geometrical statements in Real Algebraic Geometry.
+
+<p>
+<h4>Algorithms in Mathematics, via Proof Theory</h4>
+
+
+<p>
+A second theme is what one may call the relevance of classical
+mathematics to algorithms. The talks of <a 
+href="#lombardi">Henri Lombardi</a>, Marie-Francoise Roy 
+and <a href="#kohlenbach">Ulrich Kohlenbach</a> showed, in very
+different ways, that mathematical proofs that use a priori highly non
+computational concepts, such as Zorn lemma, or compactness principles,
+contain implicitely very interesting computational informations. The
+talk of Ulrich Kohlenbach presented a way to extract implicit
+informations in proofs, in such a way that one can even obtain new
+theorems, surprising to the expert, from these informations (here in
+the field of metric fixed point theory).  One interesting topic is to
+compare the two approaches: in Lombardi and Roy's talks, to use
+techniques from geometric logic, and in Kohlenbach's talk, a
+modification of G&ouml;del's dialectica interpretation, that is
+especially well suited to extract bounds from classical proofs. Ulrich
+Kohlenbach said for instance that it should be interesting to use his
+methods also for examples on algebra, where the dynamical method of
+Lombardi-Roy has been used so far.
+<p>
+A general feeling, emerging from some talks and discussions, was that
+the algorithms extracted by the dynamical method from a priori non
+effective proofs, may give algorithms that are better (even feasible)
+than the algorithms one can extract more straightforwardly from usual
+constructive arguments. For instance, in usual constructive
+mathematics, one requires to have a test of irreducibility for
+polynomials. While such a test exists in some cases, there are usually
+quite inefficient. The algorithm corresponding to a proof using this
+test is thus a priori also inefficient. By contrast the algorithm
+extracted from dynamical methods does not rely on such tests.  It was
+suggested by Henri Lombardi that some efficient algorithms may be
+obtained in this way in number theory (dynamical theory of Dedekind
+domains).  Such claims, if they happen to be verified, are of
+fundamental importance.
+
+
+<h4>Progress on basics</h4>
+
+<p>
+Another theme is best expressed by one sentence taken from the
+presentation of the seminar: "It is remarkable that in constructive
+and computer algebra, progress in sophisticated algorithms often
+implies progress on basics".  This point was stressed in the talk of
+<a href="#paule">Peter Paule</a> on symbolic summation
+for instance, who provided basic examples that would be welcome
+additions to basic courses on calculus, and several time in
+discussions, for instance for algebraic topology.  Another example was
+provided by the talk of <a href="#dowek">Gilles
+Dowek</a>, who, motivated by a quite concrete problems in safety of
+air trafic control, presented a new form of induction over real
+numbers that may be interesting for presenting basic proofs in real
+analysis.
+
+
+<h4>Proof Systems and Computer Algebra Systems</h4>
+
+<p>
+A large part of the talks were concerned about connections between
+computer algebra systems and proof systems. <a
+href="#paule">Peter Paule</a> reminded us, with some
+concrete examples, that people in proof system should be more aware of
+the power of current computer algebra systems. The talks of <a
+href="#rioboo">Renaud Rioboo</a> presented
+a system aiming at combining proofs and computer algebra computations.
+The talks of <a href="#ballarin">Clemens
+Ballarin</a> and <a href="#rubio">Julio
+Rubio</a> supplemented the talk of <a
+href="#sergeraert">Francis Sergeraert</a> by presenting
+an on-going attempt to use techniques from formal methods and
+interactive proof checking to ensure the correctness of a large
+sofware system for computations in algebraic topology.  One
+interesting conceptual connection emerged from the talk of <a
+href="#paule">Peter Paule</a>, on the
+concrete example of checking tables of equalities between special
+functions, like for instance <i>cos<sup>2</sup>x + sin<sup>2</sup> x =
+1</i>.
+<p>
+(There is actually a NIST-DLMF project of creating a new Digital
+Library of Mathematica Functions, and verification is an important
+aspect of' this project.) What is done in computer algebra is a purely
+algebraic model of the problem (here for instance using differential
+algebra to show that the derivative of <i>cos<sup>2</sup>x +
+sin<sup>2</sup> x</i> is <i>0</i>.)  But there is a mismatch between
+this representation and the representation of expressions as {\em
+functions} of real or complex quantities. Typically, the functions may
+have p&ocirc;le, or may involve ambiguities. What interest primarily
+the user of such tables is of course the interpretation of expressions
+as functions.  This suggests a natural place where proof systems may
+complement computer algebra system. Such a connection appeared in the
+talks of <a href="#pottier">Loic
+Pottier</a> and <a href="#delahaye">David
+Delahaye</a>. The simplest example may be the provided by the equality
+<i>x&nbsp;&middot;&nbsp;1/x = 1</i>. This equality is perfectly valid
+from the computer algebra viewpoint, since it is interpreted in the
+field of rational expressions (field of fractions of a polynomial
+ring).  Considered as a function <i> 1/x</i> has a p&ocirc;le at
+<i>x=0</i> and the proof system will have to generate the condition
+<i>x non equal to 0</i>.
+
+
+<h4>Constructive Mathematics</h4>
+
+ <p>
+Several talks were given on constructive mathematics. Francis
+Sergereart presented a way to do algebraic topology constructively,
+which is actually implemented in common lisp. <a 
+href="#schuster">Peter Schuster</a> presented a
+constructive definition of the notion of scheme, a basic concept in
+modern algebraic geometry. There are probably deep connections between
+this presentation, based on point-free topology, and the talks of <a
+href="#lombardi">Henri Lombardi</a> and <a
+href="#perdry">Herv&eacute; Perdry</a> on
+dynamical algebras, that would be interesting to explore further.  The
+talks of <a href="#palmgren">Erik
+Palmgren</a> and <a href="#carlstrom">Jesper Carlstr&ouml;m</a> were about
+Martin-L&ouml;f type theory. Type theory appears to be a potential
+formalism in which several concepts that were presented at the
+workshop could be elegantly expressed. Just to take one example, if we
+succeed to express constructive algebraic topology, as presented by <a
+href="#sergeraert">Francis Sergeraert</a>,
+in type theory, one would have an algorithm (in a functional
+programming language) which is correct by construction, thus bypassing
+the need of a formal verification a posteriori. In the present stage
+however, this may seem utopic (probably the program obtained in this
+way would be too inefficient), but this might be an interesting
+project. The meeting ended by a talk of <a 
+href="#spitters">Bas Spitters</a> on a constructive proof
+of Peter-Weyl's theorem, and it would be interesting to explore
+further the algorithmic ideas implicit in this proof.
+
+
+
+<h4>Impact</h4>
+
+
+<p>
+The main positive surprise of the seminar was that communication is
+possible, and in fact highly appreciated, bewteen quite distinct
+fields of mathematics and computer science.  One participant expressed
+for instance his positive surprise to see in the same talk the name of
+Jean-Pierre Serre, who made fundamental contributions in algebraic
+topology, and the name of Turing, one of the founder of the
+mathematical notion of algorithm.  The participants were working in
+different fields, but were all deeply interested in the
+interconnections between mathematics, algorithms and proofs, and
+several participants expressed the opinion that this combination of
+different topics with a strong common interest allows for a rich
+interaction. What was positive also was the emphasis, common to many
+talks, that progress in sophisticated mathematics and algorithms often
+implies progress on basics.  This seminar was also a wellcome occasion
+to have a beginning of a real dialogue between designers and users of
+proof systems, and specialists in computer algebra and
+mathematics. Such dialogues have already started in research groups
+that were represented (Linz, Nijmegen, Paris VI) but the seminar
+showed new unexpected research directions (proof theory, constructive
+algebraic topology).
+ 
+<p>
+One outcome of this week was the decision to create a European group
+under the acronym MAP for "Mathematics, Algorithms, Proofs".
+  <p>
+
+ <h2>Abstracts of the talks &middot; Dagstuhl 2003</h2>
+(chronological order)
+
+
+<h3><a name="lombardi">Henri Lombardi</a></h3>
+
+
+<h4> Dynamical algebraic structures, pointfree topological spaces and 
+Hilbert's program</h4>
+
+<p>    
+A possible relevant meaning of Hilbert's program is the following one:
+"give a semantic for classical mathematics".  More precisely, give a
+systematic interpretation of classical abstract proofs (that use Third
+Excluded Middle and Choice) about abstract objects, as proofs about
+constructive versions of these objects.
+<p>
+If this program is fulfilled we are able "at the end of the tale" to 
+extract constructive proofs of concrete results from classical 
+abstract proofs of these results.
+<p>
+Dynamical algebraic structures or (this is more or less the same 
+thing) geometric theories seem to be a good tool for doing this job. 
+In this setting, classical abstract objects are interpreted through 
+incomplete concrete specifications of these objects.
+<p>
+The structure of axioms in geometric theories give rise in a natural 
+way to distributive lattices.
+<p>
+The spectra of these lattices (as the Zariski spectrum or the real
+spectrum of a commutative ring) are, from a constructive point of
+view, pointfree topological spaces. Abstract objects correspond to
+classical points of these pointfree spaces.
+
+<p>
+We give some examples showing how all this "constructive rereading
+machinery" works when applied to classical abstract proofs in
+commutative algebra.  E.g. when one uses local-global principles.  Or
+when one uses the notion of Krull dimension: this notion is deciphered
+as a machinery of algebraic identites in the ring.
+
+
+<h3><a name="perdry">Herv&eacute; Perdry</a></h3>
+
+<h4>Title:  Constructive Theory of Valued Fields</h4>
+
+<p>
+We first give a short general presentation about valued fields:
+Hensel's Lemma, Newton Polygon Algorithm, Henselian Fields.
+<p>
+Then we present brievely a general construction of the Henselization of a
+valued field, based upon successive formal adjunction of roots. The
+correctness of this construction is a consequence of the dynamical methods
+presented by Henri Lombardi in the previous talk.
+
+
+
+<h3><a name="cohen">Arjeh Cohen</a></h3>
+
+<h4>Title:  Group Theoretic Examples of Algorithms Providing Proof Certificates</h4>
+
+<p>
+Computer algebra has always had an emphasis on complexity of
+algorithms, so that bigger and bigger problems could be solved on a
+given machine.  The internet will play an increasingly large role in
+the exchange of mathematics between people, and we believe this will
+require a different approach to computational mathematics.  As the
+exchange of mathematics across the World Wide Web becomes easier than
+solving all problems locally, the management of mathematical queries
+becomes more prominent.  The problem of verifying the correctness of
+computations is particularly acute when they are no longer done on
+local machines with software the user trusts.
+<p>
+By way of experiment, we have implemented eight group theoretic
+<i>queries</i>: invocations of permutation group algorithms that have
+been developed over the years and that are implemented as part of the
+computer algebra package GAP.  The <i>response</i> to a query is the
+output of the algorithm, which may have been run on a remote computer
+which the user knows nothing about.  The user has reason to doubt the
+validity of the response, and so will demand some kind of
+<i>verification</i>.  Since our queries are of a mathematical nature,
+this verification should take the form of (an encoding of) a proof.
+<p>
+A classical example is the factorization of a natural number.  If a
+sequence <i>p<sub>1</sub>,p<sub>2</sub>,...,p<sub>t</sub></i> of
+numbers is returned as a response to the query "factor the natural
+number <i>n</i>", it is easy for the user to verify whether
+<i>n=p<sub>1</sub>...p<sub>t</sub></i>.  In order to verify that each
+<i>p<sub>i</sub></i> is a prime number, it would be very useful to
+receive additional data, such as the primality witnesses for each
+<i>p<sub>i</sub></i>. This example has been worked out by Olga
+Caprotti, Martijn Oostdijk and the first author.
+<p>
+We treat computational permutation group theory in a similar manner.
+Our eight queries trigger responses which are either human readable
+proofs or the mathematical data (the <i>certificates</i>) needed to
+put together such a proof.  The proofs could be transformed to a
+computer checkable proof without too much effort (in fact, this has
+been done in collaboration with Pollet and Sorge). The work on the
+eight queries, ranging from group membership to the order of a
+permutation group, is joint work with Scott Murray.
+<p>
+For more details, see <a href="http://www.win.tue.nl/~amc/pub/permgp.pdf">
+http://www.win.tue.nl/~amc/pub/permgp.pdf</a>
+
+
+
+
+<h3><a name="sergeraert">Francis Sergeraert</a></h3>
+
+<h4>Title:   Constructive Algebraic Topology</h4>
+
+
+<p> 
+Some typical examples are used which show that the natural
+<i>constructive</i> aim is not covered in classical Algebraic
+Topologic.
+<p>
+Considering Algebraic Topology from this point of view led the
+lecturer and his colleague Julio Rubio to new versions of various
+exact and spectal sequences.  These new versions are in particular
+<i>effective</i>, giving new <i>algorithms</i> allowing interested
+topologists to compute some homology and homotopy groups so far
+unreachable.
+<p>
+An important computing  work has been undertaken along  the lines so
+opened.  The  Kenzo  program,  a  16000 lines  Lisp  program,  is  now
+available  implementing  the theoretical  ideas  around the  essential
+notion of <i>locally effective</i> object.
+<p>
+A  small  demonstration is  proposed  to  concretely illustrate  the
+difference  between  effective   and  locally effective  objects,  and
+showing    the    physical    nature    on   a    computer    of    an
+<i>object with effective homology</i>.
+
+
+
+
+<h3><a name="rubio">Julio Rubio</a></h3>
+
+<h4>Title:  Formal Analysis of Symbolic Computation systems for Algebraic Topology</h4>
+
+<p>
+The interest of using formal methods in the analysis, development and
+modelling of symbolic computation systems is briefly stated. This
+approach is then particularised to Sergeraert's systems as EAT
+(Effective Algebraic Topology) or Kenzo (see the talk by F. Sergeraert
+at this same Seminar). We focus on a particular case: the Basic
+Perturbation Lemma (or BPL, in short), which is one of the central
+components in the design of algorithms in Algebraic Topology and
+Homological Algebra.
+<p>
+The formal analysis, in this example and in general, is divided in two
+lines: algebraic specifications (joint work with L. Lamb&aacute;n,
+V. Pascual and C. Dom&iacute;nguez, from Universidad de La Rioja) and
+mechanised theorem proving (joint with C. Ballarin, from Technische
+Universit&auml;t M&uuml;nchen, and J. Aransay, from Universidad de La
+Rioja).
+<p>
+By means of algebraic specifications, it can be proved that the EAT
+(or Kenzo) data structures are "as general as possible", since they
+are ingredients of final objects in suitable categories of Abstract
+Data Types implementations.
+<p>
+In the second line, the Isabelle proof assistant is used to give a
+mechanised proof of the BPL. To this aim, algebraic structures are
+encoded in Isabelle trough dependent sets and extensible records (see
+the talk by C. Ballarin at this same Seminar).
+<p>
+The slides of the talk are avaible at
+
+<a href="http://www.unirioja.es/dptos/dmc/psycotrip/RubioAtDagstuhl.ppt">
+http://www.unirioja.es/dptos/dmc/psycotrip/RubioAtDagstuhl.ppt</a>
+
+
+
+
+<h3><a name="ballarin">Clemens Ballarin</a></h3>
+
+
+<h4>Title:  Algebraic Structures in Isabelle/HOL</h4>
+
+<p>
+Reuse of algebraic (and in fact, any) theories in a proof assistant
+requires the proof language (script language) to provide some sort of
+module system.  We present the approach taken in the Isabelle/HOL
+system, namely the use of \emph{locales} and the explicit representation
+of algebraic structures as record types or dependent sets.
+<p>
+The creation of an algebraic base library for Isabelle/HOL serves two
+purposes:
+<p>
+<ul> 
+<li>Evaluation of the module system
+<li>Providing the necessaary theories for the mechanisation of the
+Basic Perturbation Lemma (see presentation by Julio Rubio).</ul>
+<p>
+
+
+<h3><a name="schwichtenberg">Helmut Schwichtenberg</a></h3>
+
+<h4>Title:  Extracting Programs from Proofs</h4>
+
+<p>
+It is well known that it is undecidable in general whether a given
+program meets its specification.  In contrast, it can be checked
+easily by a machine whether a formal proof is correct, and from a
+constructive proof one can automatically extract a corresponding
+program, which by its very construction is correct as well.  This --
+at least in principle -- opens a way to produce correct software,
+e.g. for safety-critical applications.  Moreover, programs obtained
+from proofs are `commented' in a rather extreme sense.  Therefore it
+is easy to maintain them, and also to adapt them to particular
+situations.
+<p>
+The talk concentrates on the question of classical versus constructive
+proofs.  It is known that any classical proof of a specification of
+the form 
+<!-- MATH
+ $\forall x\exists y A(x,y)$
+ -->
+<IMG
+ WIDTH="96" HEIGHT="34" class="middle" 
+ SRC="dagstuhl/img18.gif"
+ ALT="$\forall x\exists y A(x,y)$"> with <IMG
+ WIDTH="58" HEIGHT="34" class="middle" 
+ SRC="dagstuhl/img19.gif"
+ ALT="$A(x,y)$"> quantifier-free can
+be transformed into a constructive proof of the same formula.
+However, when it comes to extraction of a program form a proof
+obtained in this way, one easily ends up with a mess.  Therefore, some
+refinements of the standard transformation are necessary.
+
+<P>
+In the lecture such refinements are developed, and some examples are
+studied in detail.
+
+
+
+<h3><a name="dowek">Gilles Dowek</a></h3>
+
+
+<h4>Title:   Preliminary investigations of induction over real numbers</h4>
+
+
+<p>
+The goal of this talk is to present a pinciple on real numbers similar
+to induction on natural numbers. We show that on several examples,
+proofs using this principle are simpler and more direct than proofs
+using an alternative principle such as the existence of a least upper
+bounds.  We discuss the relation between this principle and ordinal
+induction and also how proofs using this principle can be reduced.
+
+
+
+<h3><a name="kohlenbach">Ulrich Kohlenbach</a></h3>
+
+
+<h4>Title:  Proof Mining: A Logical Approach to Computational Mathematics</h4>
+
+
+
+<p>
+The first part of the talk gives a survey on how techniques from
+Mathematical Logic, so-called proof interpretations, can be used to
+extract new information from ineffective proofs in various areas of
+mathematics and, in particular, in functional analysis.  In the second
+part we present the results (in part jointly with Laurentiu Leustean)
+of a recent case study where this approach has been applied to proofs
+in metric fixed point theory.  This concerns the asymptotic regularity
+of various iteration schemes of nonexpansive functions. Our results,
+which extend to the general setting of convex metric spaces
+(Takahashi) resp. hyperbolic spaces (Goebel,Kirk,Reich) and to
+directionally nonexpansive functions (Kirk), not only provide new
+effective bounds but even yield systematically new qualitative results
+on the uniformity of asymptotic regularity.  The latter generalize all
+known results of this kind which had been obtained by functional
+analytic embedding techniques during the last 20 years. We conclude
+the talk by presenting a new general logical meta-theorem which
+implies such uniformity results "a priori" if certain easy to check
+logical conditions are met. Only to get explicit effective bounds one
+has to carry out an actual proof interpretation.
+
+ <p>
+The slides are at <a
+href="http://www.brics.dk/~kohlenb/dagstuhl03.pdf">
+http://www.brics.dk/~kohlenb/dagstuhl03.pdf</a>
+
+
+
+<h3><a name="gonzalez">Laureano Gonzalez-Vega</a></h3>
+
+
+<h4>Title Computing algebraic certificates in real algebraic geometry</h4>
+
+
+<p>
+We show how difficult is to compute algebraic certificates for
+geometrical statements in Real Algebraic Geometry by using as main
+examples Finiteness Theorem and Pierce-Birkhoff Conjecture (is every
+piecewise polynomial continuous function from <i>R<sup>n</sup></i> to
+<i>R</i> a finite combination of sup, inf and polynomials?). In the
+first case it is shown explicitely how to compute the open description
+of the set of degree four univariate polynomials without real root
+quoting that the used technique is difficult to extend to more
+complicated situations.  In the second case, it is shown how the
+algorithm provided by the rational solution for <i>n=1</i> is still
+not known to be polynomial.  <i>(joint work with Henri Lombardi)</i>
+<p>
+The web link to the slides is: <a
+href="http://frisco.matesco.unican.es/~gvega/ficheros/daghstul.pdf">
+http://frisco.matesco.unican.es/~gvega/ficheros/daghstul.pdf </a>
+
+
+
+<h3><a name="pasechnik">Dmitrii Pasechnik</a></h3>
+
+
+<h4>Title:  Complexity of semi-algebraic proofs</h4>
+
+
+<p>
+It is a known approach to translate propositional formulas into
+systems of polynomial inequalities and to consider proof systems for
+the latter ones.  The well-studied proof systems of this kind are the
+Cutting Plane proof system (CP) utilizing linear inequalities and the
+Lovasz-Schrijver calculi (LS) utilizing quadratic inequalities.  We
+introduce generalizations LS<i><sup>d</sup></i> of LS that operate
+with polynomial inequalities of degree at most <i>d</i>.
+<p>
+It turns out that the obtained proof systems are very strong.  We
+construct polynomial-size bounded degree LS<i><sup>d</sup></i> proofs
+of the clique-coloring tautologies (which have no polynomial-size CP
+proofs), the symmetric knapsack problem (which has no bounded degree
+Positivstellensatz Calculus proofs), and Tseitin's tautologies (which
+are hard for many known proof systems). Extending our systems with a
+division rule yields a polynomial simulation of CP with polynomially
+bounded coefficients, while other extra rules further reduce the proof
+degrees for the aforementioned examples.
+<p>
+Finally, we prove lower bounds on Lovasz-Schrijver ranks and on the
+size and the "Boolean degree" of Positivstellensatz Calculus
+refutations.  We use the latter bound to obtain an exponential lower
+bound on the size of static LS<i><sup>d</sup></i> and tree-like
+LS<i><sup>d</sup></i> refutations.
+
+
+
+<h3><a name="pottier">Loic Pottier</a></h3>
+
+
+
+<h4>Title:  Proofs of polynomial inequalities in Coq</h4>
+
+
+<p>
+In order to help proofs in real analysis, we have begun to implement a
+tactic which solves polynomial inequalities with real coefficients,
+and produce the complete proof of the solution, using the theory of
+types of the Coq system.  This tactic has two parts: 
+
+<p><ul>
+
+<li> first we adapt a method from Bochnak-Coste-Roy-H&ouml;rmander to
+compute, by euclidian divisions, all the possible signs of the
+involved polynomials.  From these signs we can conclude for the
+existence of solution for the inequalities.
+<p>
+<li> second, we build from a trace of execution of the algorithm, a
+proof of the seult. This proof uses only polynomial equalities and
+applications of various forms of the intermediate value theorem.</li>
+</ul>
+<p>
+
+For the moment, the tactic is completely implementesd in one
+variable. The H&ouml;rmander method is implemented in the general
+case, and works in simple non trivial cases.
+
+
+
+<h3><a name="mechveliani">Serge Mechveliani</a></h3>
+
+<h4>Title:  Term rewriting for automated proofs in algebra and
+      programming</h4> 
+
+<p>
+We discuss the project of bringing automatic proof possibility
+to computer algebra systems. To our mind, term rewriting (TRW)
+technique should be very useful here. Also it is desirabe some
+adequate programming tool: AAS &#8212; any
+Appropriate Algebraic Specification language and tool for TRW
+(order sorted TRW logic, abstract theories, reflection, and so on).
+<p>
+Induction by appropriately chosen expressions combines naturally
+with TRW, making it fit to prove `usual' theorems in algebra and
+programming.
+<p>
+Some particular features of the projects are pointed out, as
+partial completion and resource approach.
+<p>
+Certain simple first-approach strategy is introduced and a couple
+examples are solved with it, like  (N+M = M+N)  for natural
+numbers and  reverse(reverse(Xs)) = Xs   for lists.
+The talk describes the recent state of study and investigation.
+<p>
+The slides are available at <a
+href="http://www.botik.ru/~mechvel/papers.html">
+http://www.botik.ru/~mechvel/papers.html</a>
+
+
+
+
+<h3><a name="daumas">Marc Daumas</a></h3>
+
+
+<h4>Title:  Formal Approach to Floating Point Numbers</h4>
+
+
+<p>
+I present in this talk the work initiated with Laurent Thery and
+Laurence Rideau and continuing with the PhD of Sylvie Boldo. Floating
+point arithmetic is heavily used in critical applications both
+off-line for the engineering and simulation of future designs and
+in-situ to control processes. Validating such applications typically
+incurs lots of testing and mathematical developments in numerical
+analysis. Most results in numerical analysis state that floating point
+is an approximation to real arithmetic where tiny relative round-off
+errors (perturbations) are introduced with each atomic operation. This
+approach has been very successful but a few catastrophic bugs have led
+people to refine this definition when it is possible and needed.
+<p>
+We have designed in Coq a formal specification that includes the IEEE
+standard floating point arithmetic. The talk presents some of our
+achievements and our feeling about formal methods. It starts with a
+brief survey of existing tools for formal verification and former
+specifications of floating point arithmetic. Achievements include the
+exact representation of the round-off error, the two's complement
+floating point arithmetic implanted in some DSP, the expansions of
+floating point numbers to produce multiple precision arithmetic and
+the faithful evaluation of polynomials with Horner's rule.
+<p>
+The slides are available at 
+<a href="http://www.ens-lyon.fr/~daumas/SoftArith/Dagsthul.pdf">
+http://www.ens-lyon.fr/~daumas/SoftArith/Dagsthul.pdf</a>
+
+
+<h3><a name="paule">Peter Paule</a></h3>
+
+<h4>Title: Symbolic Summation: Constructive Aspects and Verification</h4>
+<p>
+The talk presents various thoughts on constructive aspects of
+computation and verification related to recent work in symbolic
+summation and special functions. Illustrative examples concern
+Zeilberger's paradigm (e.g., certificate proofs of definite
+sums evaluations via the derivation of linear recurrences with 
+polynomial coefficients), d'Alembertian solutions to linear 
+difference equations in difference fields (e.g., Schneider's 
+extension of Karr's indefinite summation machinery), and closure 
+properties of <i>d</i>-finite (holonomic) functions and sequences
+(e.g., the NIST-DLMF project of creating a new Digital
+Library of Mathematica Functions). Papers connected to
+the topics of the talk are to find at
+<p>
+<a href="http://www.risc.uni-linz.ac.at/research/combinat/risc/">
+http://www.risc.uni-linz.ac.at/research/combinat/risc/</a>
+
+
+<h3><a name="delahaye">David Delahaye</a></h3>
+
+<h4>Title: Dealing with Algebraic Expressions over a (Commutative) Field
+in Coq using Maple</h4>
+<p>
+We describe an interface between the Coq proof assistant and the Maple
+symbolic computation system, which mainly consists in importing, in
+Coq, Maple computations regarding algebraic expressions over
+(commutative) fields. This can be either pure computations, which do
+not require any validation, or computations used during proofs, which
+must be proved (to be correct) within Coq.  These correctness proofs
+are completed automatically thanks to the tactic Field, which deals
+with equalities over (commutative) fields.  This tactic may generate
+side conditions (regarding the denominators), which must be proved by
+the user, and has been implemented in a reflexive way, which ensures
+both efficiency and certification. The implementation of this
+interface is quite light and can be very easily extended to get other
+Maple functions (additionally to the four functions we have imported
+and used in the examples we give).  <i>(joint work with Michaela
+Mayero)</i>
+
+
+<h3><a name="mourrain">Bernard Mourrain</a></h3>
+
+<h4>Title:  Symbolic Numeric Methods for Certified Computations</h4>
+
+
+<p>  
+In this talk, we consider the problem of certification in geometry,
+from an effectivity point of view. We describe several examples, where
+approximate but certified computation are required when dealing with
+geometric objects such as curves and surfaces. Several methods
+combining algebraic, symbolic and numeric computation are described
+and illustrated on typical problems such as computing the arrengement
+of curves, surfaces, their topology, ...  More details can be found in
+<a href="
+http://www-sop.inria.fr/galaad/mourrain/Cours/20030106dagsthul.pdf">
+http://www-sop.inria.fr/galaad/mourrain/Cours/20030106dagsthul.pdf</a>
+
+
+<h3><a name="bosma">Wieb Bosma</a></h3>
+
+<h4>Title:  Certificates in Number Theory</h4>
+
+<p>
+As part of a project in Nijmegen to combine the strengths of `proof
+assistants' and computer algebra systems we investigate the
+possibilities of using the results of calculations inside theorem
+provers.  In this talk I considered one of the simplest cases, where
+the proof assistant would use the factorization of an integer in a
+sceptical way. This requires that the computer algebra system provides
+certificates for primality of the prime factors it exhibits.  An
+overview was given of the state of the art of factorization and
+primality proving algorithms, as well as some results on certificates
+for compositeness and for primality.
+<p>
+To illustrate the way these problems can be handled in the Magma
+computer algebra system, I have also shown an implementation of the
+Agarwal, Kayal, and Saxena algorithm.  This exciting new algorithm,
+published in September 2002 was the first deterministic method for
+distinguishing primes from composite numbers that runs in polynomial
+time.  One of the curious properties of this algorithm is that it is
+entirely elementary, and only the complexity bound required some hard
+analytic number theory. (However, analysis by Hendrik Lenstra has
+shown that even that can be largely overcome.)
+<p>
+The slides of the talk can be found at <a
+href="http://www-math.sci.kun.nl/~bosma/PandA/talk.ps">
+http://www-math.sci.kun.nl/~bosma/PandA/talk.ps</a>
+
+
+        
+<h3><a name="schuster">Peter Schuster</a></h3>
+
+<h4>Title:  Ring Spectra Without Points</h4>
+
+<p>  
+The purpose of this study is to pave the way from formal topology to
+algebraic geometry. In addition to casting prime and maximal ideals
+for a secondary part, we thus aim at a constructive road to algebraic
+geometry of as predicative a nature as possible. In return, the
+category of commutative rings is embedded into that of formal
+geometries.
+<p>
+To start with, the present formal version of the Zariski topology on
+the prime spectrum of a commutative ring is enriched with a
+coinductively generated positivity relation. A formal counterpart of
+the structure sheaf is then introduced that equally represents the
+given ring; this may further serve as a guiding example for a notion
+of sheaves on formal topologies not only of that particular kind.
+<p>
+We also invent formal geometries, a natural formalisation of the
+category of locally ringed spaces that allows to rephrase the
+universal property characteristic of the Zariski spectrum together
+with the aforementioned structure sheaf. In contrast to even the
+locale-theoretic approach, neither points nor stalks need to occur,
+let alone any invocation of Zorn's lemma.
+
+
+<h3><a name="schicho">Josef Schicho</a></h3>
+
+<h4>Title:   Ill-posed Problems in Computer Algebra</h4>
+
+
+<p>  
+Traditionally, computer algebra computes with exact domains, which are
+not subject to approximation errors or roundoff errors. However, there
+are several situations where it is of advantage to study classical
+problems in computer algebra over approximative domains such as the
+floating point numbers. This leads typically to ill-posed numerical
+problems, where the answer does not depend continuously on the input
+parameters. Examples are the computation of GCDs, polynomial
+factorization, polynomial decomposition, rational parametrization.
+Instead of solving the ill-posed problem as it is, one is usually
+satisfied with the solution of a well-posed problem which is "nearby"
+- this is the approach of regularization. Interpreting the output by
+mathematically precise and verifiable statements is often highly
+nontrivial. The main purpose of this talk is to throw some light on
+these difficulties, hopefully leading to clarifying discussions.
+
+
+<h3><a name="rioboo">Renaud Rioboo</a></h3>
+
+
+<h4>Title:  A presentation of the FoC project</h4>
+
+<p>
+This talk describes the current state of the FoC project. The project
+is a joint effort of researchers from the Laboratoire d'Informatique
+de Paris 6 (LIP6) of Universit&eacute; Pierre et Marie Curie, the
+Institut National de Recherche en Informatique et Automatique (INRIA)
+and the Conservatoire National des Arts et M&eacute;tiers (CNAM). The
+purpose of the project, started in late 1997 is to provide tools for
+certified computer algebra. Following the Axiom initiative, we propose
+to offer to computer algebra developers a language suitable for both
+expressing and certifying computer algebra algorithms. A compiler
+translates user level code into Objective Caml code that runs
+efficiently and to Coq code that the user can certify in an
+interactive Coq session.
+<p>
+The slides are available at <a
+href="http://calfor.lip6.fr/~rr/dagstuhl.ps">
+http://calfor.lip6.fr/~rr/dagstuhl.ps</a>
+
+
+<h3><a name="palmgren">Erik Palmgren</a></h3>
+
+<h4>Title:  Constructing order completions in type theory</h4>
+
+<p>
+The constructive real numbers are known to verify only a weakened form
+of the axioms for total order.  It is a so-called pseudo-order. We
+examine two kinds of completions by cuts. For arbitrary dense
+pseudo-orders these are Dedekind cuts, and for divisible,
+pseudo-ordered groups, we consider Cauchy cuts. We show how these can
+be predicatively defined, using a generalisation of dependent choice.
+
+
+
+<h3><a name="carlstrom">Jepser Carlstrom</a></h3>
+
+<h4>Title:  Descriptive Definitions in Type Theory</h4>
+
+
+<p>   
+Descriptive definitions are very common in mathematics: you prove
+there is a unique <i>x</i> satisfying <i>P(x)</i> and then give that
+<i>x</i> a name. For instance, it is common to define
+<i>a<sup>-1</sup></i> as `the <a>x</a> such that <i>ax=1</i> and
+<i>xa=1</i>'.
+
+<p> In formalizing mathematics in type theory, one has
+to translate the descriptive definitions to explicit ones, because
+there is no support for descriptive definitions in type theory.  There
+are wellknown translations but they are not useful in practice because
+they yield long and unnatural proofs.
+<p>
+I will give a very direct interpretation in type theory by translating
+a modified version of S&ouml;ren Stenlund's natural deduction-style
+system for first order intuitionistic logic with descriptors. The
+interpretation has several advantages, among them being the fact that
+it seems to be useful in practice.
+
+
+<h3><a name="spitters">Bas Spitters</a></h3>
+
+h4>Title: Constructive Peter-Weyl's Theorem</h4>
+
+<p>
+We claim that, contrary to Weyl's belief, constructive mathematics
+suffices for the applications of mathematics. To support our claim we
+prove the Peter-Weyl theorem in a constructive and natural way.  For
+this proof we need constructive integration theory, Gelfand theory and
+spectral theory.  These theories will be outlined in the talk.  As
+proposed by Weyl we stress that mathematics should be build on basic
+observables or finite approximations.
+</p>
+
+
+
+
+
+
+
+
+
+
+

@@ -1,1 +1,107 @@
-Hello world
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta content="text/html; charset=iso-8859-15" http-equiv="content-type">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="Mathematics, Algorithms, Proofs, MAP meetings, Formal proofs, 
+        Proof Theory, Complexity Theory, Computer Algebra, Effective Algebraic Topology, Constructive Mathematics">
+    <meta name="description" content="This web site hosts the information of the MAP (Mathematics = Algorithms + Proofs) network
+      and series of meetings. It cinludes information about past meetings, future meetings, and also some of the members of the network.
+      Its main interest topics include Formal proofs, Proof Theory, Complexity Theory, Computer Algebra, 
+      Effective Algebraic Topology, Constructive Mathematics.">
+    <meta name="Author" content="Jesús Aransay">
+    <meta name="Date" content="25, Febrero 2014">
+    <meta name="robots" content="all">
+    <title>MAP (Mathematics = Algorithms + Proofs) web site</title>
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <link href="http://fonts.googleapis.com/css?family=Alef:400,700" rel="stylesheet" type="text/css">
+    <link href="document.css" rel="stylesheet" type="text/css">
+    <link href="app.css" rel="stylesheet" type="text/css">
+    <link href="dropdownmenu.css" rel="stylesheet" type="text/css">
+  </head>
+  <body class="claro" id="myapp">
+  <header id="idup">
+      <table id="posters">
+        <colgroup span="5" width="20%"> </colgroup>
+        <tbody>
+          <tr valign="bottom">
+            <td> <a href="files/Poster_2010.pdf"><img src="files/Poster_2010R.jpg" alt="Poster of the MAP 2010 Conference" width="100%"></a></td>
+            <td> <a href="files/MAP_2012_School.jpg"><img src="files/MAP_2012_School.jpg" alt="Poster of the MAP 2012 Summer School" width="100%"></a></td>
+            <td> <a href="files/Poster_2012.jpg"><img src="files/Poster_2012R.jpg" alt="Poster of the MAP 2012 Conference" width="100%"></a></td>
+            <td> <a href="files/Poster_Lombardi_2011.png"><img src="files/Poster_Lombardi_2011R.png" alt="Poster 2011 MAP meeting in Honour of Henri Lombardi" width="100%"></a></td>
+            <td style="text-align: center;"> <a href="files/Poster_2011.pdf"><img src="files/Poster_2011R.jpg" alt="Poster of the MAP 2011 Conference" width="100%"></a></td>
+          </tr>
+        </tbody>
+      </table>
+      <h1 id="webheader"> <acronym>MAP</acronym>, Mathematics = Algorithms + Proofs</h1>
+   </header>
+   <nav class="nav-container">
+      <ul>
+        <li> <a href="index.html">Home</a> </li>
+        <li class="events"><a href="#">Next events</a>
+          <ul class="levents">
+	    
+          </ul>
+        </li>
+        <li class="events"><a href="#">Past Events</a>
+          <ul class="levents">
+	    <li><a href="marseille2016.html" class="innerlink">Marseille 2016</a></li>
+	    <li><a href="toronto2015.html" class="innerlink">Toronto 2015 <br/> Thematic Program on Computer Algebra </a></li>
+	    <li><a href="paris2015.html" class="innerlink">Paris 2015</a></li>
+	    <li><a onclick="loadUrl(this.href); return false;" href="http://perso.crans.org/cohen/map2014/">Paris 2014</a></li>
+            <li><a onclick="loadUrl(this.href); return false;" href="http://www.map2012.uni-konstanz.de/">Lake Constanz 2012</a></li>
+            <li><a onclick="loadUrl(this.href); return false;" href="http://www-sop.inria.fr/manifestations/MapSpringSchool/">Sophia Antipolis Spring School 2012</a></li>
+            <li><a href="leiden2011.html" class="innerlink">Leiden 2011</a></li>
+            <li><a onclick="loadUrl(this.href); return false;" href="http://epiphymaths.univ-fcomte.fr/fete-a-henri/">Modern Constructive Algebra 2011</a></li>
+            <li><a onclick="loadUrl(this.href); return false;" href="http://www.unirioja.es/dptos/dmc/MAP2010/">Logroño 2010</a></li>
+            <li><a href="monastir2009.html" class="innerlink">Monastir 2009</a></li>
+            <li><a href="summerschool2008.html" class="innerlink">ICTP Summer School 2008</a></li>
+            <li><a href="leiden2007.html" class="innerlink">Leiden 2007</a></li>
+            <li><a onclick="loadUrl(this.href); return false;" href="http://map.disi.unige.it/summer_school/index.php">Genova Summer School 2006</a></li>
+            <li><a href="castro2006.html" class="innerlink">Castro Urdiales 2006</a></li>
+            <li><a onclick="loadUrl(this.href); return false;" href="http://www.dagstuhl.de/de/programm/kalender/semhp/?semnr=05021">Dagstuhl 2005</a></li>
+            <li><a href="luminy2004.html" class="innerlink">Luminy 2004</a></li>
+            <li><a href="dagstuhl2003.html" class="innerlink">Dagstuhl 2003</a></li>
+          </ul>
+        </li>
+        <li><a href="members.html" class="innerlink">Network members</a></li>
+        <li class="events"><a href="#">Network info</a>
+		<ul class="levents">
+		<li><a href="manifesto.html" class="innerlink">Manifesto</a></li>
+		<li><a href="info.html" class="innerlink">Contact info</a></li>
+		</ul>
+	</li>
+      </ul>
+    </nav>
+
+	<article id="manifesto">
+	<h2> MAP = Mathematics + Algorithms + Proofs </h2>
+	<p>
+	The MAP community consists of researchers from the now overlapping fields of
+	certified proofs and programs, constructive mathematics, computer algebra,
+	effective algebra (real algebraic geometry, algebraic topology, and
+	homological algebra, ...).
+	<br>
+	This initiative started eleven years ago in Dagstuhl (2003), when the fields
+	were still further apart. The <a onclick="loadUrl(this.href); return false;" href="http://wiki.portal.chalmers.se/cse/pmwiki.php/ForMath/">
+	European ForMath project (2010 - 2013)</a> arose
+	from the MAP community. See the <a href="manifesto.html" class="innerlink">MAP Manifesto</a> for more information about
+	MAP.
+        </p>
+	
+	<br>
+
+	<!--See the Section "Next Events" in this website for information on the Séminaire d'histoire des mathématiques de l'IHP (Paris, France), to be held in
+	Paris on the 16th of January of 2015.-->	
+
+
+      </article>
+ 
+    <footer>
+        <hr style="width:95%"> Last modification: 15/01/2016; 
+	<a href="mailto:jesus-maria.aransay@unirioja.es"> contact us</a>; 
+	<a href="#idup">Back to the header</a>.
+    </footer>
+  </body>
+</html>

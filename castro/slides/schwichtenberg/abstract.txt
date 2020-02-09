@@ -1,0 +1,7 @@
+Title : Program Extraction from Normalization Proofs
+
+Abstract: We formalize the standard proof (using computability
+predicates) of the existence of normal forms for terms of the simply
+typed lambda-calculus.  Then we machine-extract a program from this
+proof, which turns out to implement the well-known normalization by
+evaluation algorithm.

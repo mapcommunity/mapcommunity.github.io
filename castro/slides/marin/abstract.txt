@@ -1,0 +1,14 @@
+
+When we study the structure of nonunital rings, they appear some categories
+of modules over them, one of those is the category of firm modules, i.e.
+modules $M$ such that the multiplication $R \otimes_R M \to M$ is an isomorphism. 
+The ring itself uses not to be firm, but there is always a special family of firm
+modules that generates all the others. Those special modules are built from
+infinite graphs that describe the module structure.
+
+Similar patterns in different graphs generate module homomorphisms. Those
+are the only possible morphisms in some important cases. In order to
+represent those infinite graphs on a computer, we also need that some basic
+patterns are repeated. This family is dense and very useful in order to
+compute morphisms. We represent them and give an algorithm which says
+when two of such graphs represent isomorphic modules.

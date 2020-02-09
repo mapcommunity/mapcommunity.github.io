@@ -1,0 +1,9 @@
+In this conference we present our experience using the ACL2 system to verify
+computer algebra. First we give a short introduction to the formal
+verification of programs and the use of theorem provers as a tool for this
+task. Then, we present a short overview to the ACL2 system, used by our
+reserch group in Seville to carry out formal verification, and we try to
+motivate why we think it is suitable for formal verification of symbolic
+computation systems. Finally we show an example: the formal proof in ACL2 of
+Dickson's lemma, in the context of the development of a formally verified
+Common Lisp implementation of Buchberger algorithm.

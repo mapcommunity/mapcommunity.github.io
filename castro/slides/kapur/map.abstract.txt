@@ -1,0 +1,25 @@
+Will Algebraic Geometry Rescue Program Verification?
+
+ Deepak Kapur
+ Department of Computer Science
+ University of New Mexico
+ Albuquerque, NM, USA
+
+Three different approaches for automatically generating
+polynomial relations as loop invariants are
+presented.  A method based on quantifier-elimination seems
+particularly promising since it works for programs with nested
+loops and procedure calls, as well as it admits numerous
+heuristics; the use of an incomplete method for
+quantifier-elimination does not produce an incorrect invariant
+but rather, a weak invariant.  The other two approaches use
+ideal-theoretic semantics of simple programming language
+constructs. Polynomial invariants form an ideal which (or its
+approximations) can be computed using algebraic geometry tools.
+The approaches are illustrated using a variety of examples.  The
+critical role of algebraic geometry in discovering these results
+is discussed. It is proposed that equally rich theories about
+other data structures will have to be developed in order to make
+progress in automatically generating program invariants expressed
+in terms of properties of such data structures.
+

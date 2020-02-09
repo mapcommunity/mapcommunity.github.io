@@ -1,0 +1,11 @@
+(Joint work with David Delahaye)
+
+We propose a decision procedure for algebraically closed fields based on a
+quantifier elimination method. The procedure is intended to build proofs for
+systems of polynomial equations and inequations. We describe how this
+procedure can be carried out in a proof assistant using a Computer Algebra 
+system in a purely skeptical way. We present an implementation in the 
+particular framework of Coq and Maple giving some details regarding the 
+interface between the two tools. This allows us to show that a Computer
+Algebra system can be used not only to bring additional computational power to 
+a proof assistant but also to enhance the automation of such tools.

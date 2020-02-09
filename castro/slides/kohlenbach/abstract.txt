@@ -1,0 +1,10 @@
+In recent years (though influenced by papers of G. Kreisel going back 
+to the 50's) 
+an applied form of proof theory systematically evolved which sometimes 
+is called `Proof Mining'. 
+A particularly fruitful area of applications of proof theory in mathematics 
+has been numerical and nonlinear functional analysis. 
+This 4-part course gives a survey on the logical 
+foundations of this approach and its applications in analysis.
+
+

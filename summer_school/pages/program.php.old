@@ -1,0 +1,53 @@
+<?
+	$util = new Util();
+	$invited = $util->getInvitedSpeakers();
+	$talks = $util->getContributedTalks();
+?>
+<p class="title" align="justify">
+&curren; Invited Speakers
+</p>
+<p align="justify">
+<ul style="line-height:2;">
+<?
+	foreach($invited as $speaker){
+?>
+	<li><b><?=$speaker['nome']?></b>, <?=$speaker['da']?> (<a class="lbody" href="http://<?=$speaker['link']?>" target="_blank"><?=$speaker['link']?></a>)</li>
+<?
+	}
+?>
+</ul>
+</p>
+
+<p class="title" align="justify">
+&curren; Special Sessions
+</p>
+<p align="justify">
+<ul style="line-height:2;">
+<li><b>Security</b> - organized by Catherine Maedows (NRL).</li>
+<li><b>Quantum Computing</b> - organized by Prakash Panangaden (McGill), Mike Mislove (Tulane) and Peter Selinger (Dalhousie).</li>
+<li><b>Real Time Systems</b> - organized by Joel Ouaknine (Oxford) and James Worrell (Oxford).</li>
+</ul>
+<b>Details will be announced as they become available.</b></br>
+</p>
+
+<p class="title" align="justify">
+&curren; Contributed talks
+<p align="justify">
+<ul style="line-height:2;">
+<?
+	$i = 0;
+	foreach($talks as $elem){
+?>
+	<li>
+		<a class="lbody" href="#" onClick="window.open('common/pop_abstract.php?ref=<?=$i?>','abstract','height=400,width=500,toolbar=no,scrollbars=yes');return false;">
+			<b><?=$elem['title']?></b></a>,
+		<?=$elem['author']?>
+	</li>
+<?
+		$i++;
+	}
+?>
+</ul>
+</p>
+</p>
+

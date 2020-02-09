@@ -1,0 +1,35 @@
+
+
+<p>1. Standard Bases and Operations on Ideals and Modules.</p>
+
+<p>This includes  an overview on  standard bases in local,  global and
+mixed rings, for  ideals and modules.  We show  algorithms for solving
+the  ideal  and  submodule  membership  problem and  as  well  as  for
+elimination of variables which amounts to compute the (closure) of the
+image of a morphism in algebraic geometry.</p>
+
+<p>2. Integral Closure and Constructive Normalization.</p>
+
+<p>We  give an  algorithm to  compute the  normalization of  a reduced
+affine ring (its integral closure  in the total ring of fractions) and
+for computing an ideal defining the non-normal locus.</p>
+
+<p>3. Computation in Local Rings.</p>
+
+<p>We show how local monomial  orderings in a polynomial ring allow to
+effectively  compute in  the localization  at a  maximal ideal  by the
+general theory of  standard bases. We do also  address the relation to
+standard bases in power series rings.</p>
+
+<p>4. Algorithms in Singularity Theory.</p>
+
+<p>Computations  in local  rings can  be used  to  effectively compute
+important invariants  of singularities, such as the  Milnor number and
+the  Tjurina number.   In more  detail we  shall treat  singular plane
+algebraic curves.</p>
+
+<p>We  assume  that  the  participants  do  have  basic  knowledge  in
+commutative  algebra and algebraic  geometry.  We  shall use  the free
+computer algebra  system SINGULAR (www.singular.uni-kl.de),  where all
+the  presented  algorithms   have  been  implemented,  for  additional
+exercises and tutorials.</p>

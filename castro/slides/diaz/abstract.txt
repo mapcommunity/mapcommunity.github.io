@@ -1,0 +1,6 @@
+Our main aim with this talk is to introduce a dynamic constructive Galois Theory which
+allows us to obtain a representation of the splitting field of a separable polynomial over a field. 
+We present some methods which are giving a constructive substitute for the classical 
+splitting field, which does not work when there is no factorization algorithm. 
+With our methodology, we're trying to combine the dynamic evaluation
+techniques (D5) introduced by Della Dora, Dicrescenzo and Duval with the fantastic Galois theory.

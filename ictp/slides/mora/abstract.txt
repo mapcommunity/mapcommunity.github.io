@@ -1,0 +1,43 @@
+
+<p>  Macaulay  introducing  the  notion of  inverse  systems  proposed
+duality  as a strong  combinatorial tool  for performing  ideal theory
+investigation.    This   series  of   lectures   surveys  the   recent
+combinatorial algorithmical results  stemmed from Macaulay's ideas and
+the  description  they  offer  on  the structure  of  a  0-dimensional
+ideal:</p>
+
+<p>1. Moeller Algorthm and variations (FGLM, Fitzpatrick).</p>
+
+<p>  The algorithm applies  elementary linear  algebra to  solve, with
+good  complexity,  the  following  problem:  given  a  finite  set  of
+functionals which defines a  0-dim.  ideal, return its Groebner basis.
+The  main applications  are point  evaluation, computing  lex Groebner
+bases (FGLM), decoding BCM codes (Fitzpatrick).</p>
+
+<p>2. Cerlienco-Mureddu  Algorithm, Lazard Theorem, Gianni--Kalkbrener
+Theorem.</p>
+
+<p> The lecture gives a survey on the main results which shed light on
+the  combinatorial structure  of (radical)  0-dimensional  ideals. The
+lecture gives also a guideline  to the readings required by the fourth
+lecture.</p>
+
+<p>3. Lasker--Noether Decomposition and Macaulay's Algorithm.</p>
+
+<p> Lasker--Noether First Theorem states that each ideal is decomposed
+into  irreducible  components  and  a lemma  proves  that  irreducible
+components  are  primaries.    Lasker--Noether  Second  Theorem  packs
+together the irreducible components  associated to a specific prime in
+order to produce a  decomposition into primaries notwithstanding that,
+when the theorem was stated,  there was already an explicit procedure,
+given by Macaualy, which allowed to compute the irreducible components
+of any  given primary. The aim of  this lecture is to  explain why the
+notion   of   irreducible   decomposition   has  been   removed   from
+booktexts.</p>
+
+<p>4. Variations on point interpolation.</p>
+
+<p> The students are required to read the suggested papers and to test
+the   corresponding   algorithms  on   some   easy  and   illuminating
+examples. The aim of the last  lecture is a common discussion on these
+algorithms and on their practicability.</p>

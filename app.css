@@ -1,0 +1,42 @@
+/*
+ * This file is provided for application-specific style rules.
+ *
+ */
+html,body {
+	height: 100%;
+	width: 100%;
+}
+
+/*The font makes reference to the one imported from google*/
+
+h1, h2, h3, h4 {
+        font-family: 'Alef', sans-serif;
+}
+
+/*Style rules for the posters table*/
+
+table#posters {
+	border-collapse:collapse;
+	table-layout:fixed;
+	width:80%;
+	margin:auto;
+	height:auto;
+	position:center;
+	padding:2%;
+	border: 0;	
+}
+
+
+h1#webheader{
+	text-align: center;
+}
+
+article#manifesto{
+	padding: 0 10em;
+}
+
+footer{
+	text-align: center; 
+	height: 60px; 
+	margin-top: 21px;
+}

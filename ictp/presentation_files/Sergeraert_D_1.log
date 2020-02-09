@@ -1,0 +1,1176 @@
+> 
+--------------------------------------------------<Comment>
+;; Loading the Kenzo program.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(LOAD-CFILES)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\macros.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\various.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\classes.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\combinations.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\chain-complexes.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\chcm-elementary-op.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\effective-homology.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\homology-groups.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\searching-homology.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\cones.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\tensor-products.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\coalgebras.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\cobar.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\algebras.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\bar.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\simplicial-sets.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\simplicial-mrphs.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\delta.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\special-smsts.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\suspensions.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\disk-pasting.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\cartesian-products.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\eilenberg-zilber.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\kan.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\simplicial-groups.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\fibrations.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\loop-spaces.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\ls-twisted-products.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\lp-space-efhm.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\classifying-spaces.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\k-pi-n.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\serre.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\cs-twisted-products.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\cl-space-efhm.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\whitehead.fasl
+; Fast loading C:\Docume~1\Francis\AA\Kenzo\Kenzo-1-Acl5\smith.fasl
+("macros" "various" "classes" "combinations" "chain-complexes" "chcm-elementary-op" "effective-homology" "homology-groups" "searching-homology" "cones" ...)
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; I intend to compute 2+2.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(+ 2 2)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+4
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constructing P^infty R.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF P-INFTY-R (K-Z2 1))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K1 Abelian-Simplicial-Group]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Simplices in dimension < 6.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(DOTIMES (I 6) (PRINT (BASIS P-INFTY-R I)))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+(0) 
+(1) 
+(2) 
+(3) 
+(4) 
+(5) NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Examining the simplicial structure.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(DOTIMES (I 6)
+  (FORMAT T "~%Dimension ~A" I)
+  (UNLESS (ZEROP I)
+    (DOTIMES (J (1+ I))
+      (FORMAT T "~%  Face ~A = ~A" J
+              (FACE P-INFTY-R J I I)))))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+Dimension 0
+Dimension 1
+  Face 0 = <AbSm - 0>
+  Face 1 = <AbSm - 0>
+Dimension 2
+  Face 0 = <AbSm - 1>
+  Face 1 = <AbSm 0 0>
+  Face 2 = <AbSm - 1>
+Dimension 3
+  Face 0 = <AbSm - 2>
+  Face 1 = <AbSm 0 1>
+  Face 2 = <AbSm 1 1>
+  Face 3 = <AbSm - 2>
+Dimension 4
+  Face 0 = <AbSm - 3>
+  Face 1 = <AbSm 0 2>
+  Face 2 = <AbSm 1 2>
+  Face 3 = <AbSm 2 2>
+  Face 4 = <AbSm - 3>
+Dimension 5
+  Face 0 = <AbSm - 4>
+  Face 1 = <AbSm 0 3>
+  Face 2 = <AbSm 1 3>
+  Face 3 = <AbSm 2 3>
+  Face 4 = <AbSm 3 3>
+  Face 5 = <AbSm - 4>NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Checking the coherence of the simplicial structure.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(CHECK-SMST P-INFTY-R 0 6)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+Checking the 0-simplices...
+Checking the 1-simplices...
+Checking the 2-simplices...
+Checking the 3-simplices...
+Checking the 4-simplices...
+Checking the 5-simplices...T
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Computing H_i(P-infty-R) for i < 6.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(HOMOLOGY P-INFTY-R 0 6)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+Computing boundary-matrix in dimension 0.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 0) :
+0 
+End of computing.
+
+
+Computing boundary-matrix in dimension 1.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 1) :
+1 
+End of computing.
+
+
+
+
+Homology in dimension 0 :
+
+
+Component Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+
+
+Computing boundary-matrix in dimension 1.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 1) :
+1 
+End of computing.
+
+
+Computing boundary-matrix in dimension 2.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 2) :
+2 
+End of computing.
+
+
+
+
+Homology in dimension 1 :
+
+
+Component Z/2Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+
+
+Computing boundary-matrix in dimension 2.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 2) :
+2 
+End of computing.
+
+
+Computing boundary-matrix in dimension 3.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 3) :
+3 
+End of computing.
+
+
+
+
+Homology in dimension 2 :
+
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+
+
+Computing boundary-matrix in dimension 3.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 3) :
+3 
+End of computing.
+
+
+Computing boundary-matrix in dimension 4.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 4) :
+4 
+End of computing.
+
+
+
+
+Homology in dimension 3 :
+
+
+Component Z/2Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+
+
+Computing boundary-matrix in dimension 4.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 4) :
+4 
+End of computing.
+
+
+Computing boundary-matrix in dimension 5.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 5) :
+5 
+End of computing.
+
+
+
+
+Homology in dimension 4 :
+
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+
+
+Computing boundary-matrix in dimension 5.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 5) :
+5 
+End of computing.
+
+
+Computing boundary-matrix in dimension 6.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+Computing the boundary of the generator 1 (dimension 6) :
+6 
+End of computing.
+
+
+
+
+Homology in dimension 5 :
+
+
+Component Z/2Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 39m 49s.
+
+NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constructing K(Z,2).
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF K-Z-2 (K-Z 2))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K29 Abelian-Simplicial-Group]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Examining the 4-simplices.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(BASIS K-Z-2 4)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+Error: The object [K29 Abelian-Simplicial-Group] is locally-effective.
+
+> 
+--------------------------------------------------<Comment>
+;; Example of 4-simplex.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF 4-SIMPLEX
+      (GBAR 4 0 '(1234 2345 3456) 0
+            '(12345 23456) 0 '(9999999999) 0 NIL))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+<<GBar<- (1234 2345 3456)><- (12345 23456)><- (9999999999)><- NIL>>>
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Computing its boundary.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(? K-Z-2 4 4-SIMPLEX)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+----------------------------------------------------------------------{CMBN 3}
+<1 * <<GBar<- (1234 5801)><- (10000012344)><- NIL>>>>
+<1 * <<GBar<- (2345 3456)><- (23456)><- NIL>>>>
+<-1 * <<GBar<- (3579 3456)><- (35801)><- NIL>>>>
+<1 * <<GBar<- (12345 23456)><- (9999999999)><- NIL>>>>
+<-1 * <<GBar<- (13579 25801)><- (9999999999)><- NIL>>>>
+------------------------------------------------------------------------------
+
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constructing
+;;   X = P^infty R / P^3 R.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF X (R-PROJ-SPACE :INFINITY 4))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K41 Simplicial-Set]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constructing the third loop space:
+;;   Omega^3 (X).
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF OOOX (LOOP-SPACE X 3))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K70 Simplicial-Group]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constructing the Adams chain complex.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF ADAMS (RBCC (EFHM OOOX)))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K430 Chain-Complex]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Computing the boundary matrix
+;;   between dimensions 5 and 4.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(CHCM-MAT ADAMS 5)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+Computing boundary-matrix in dimension 5.
+Rank of the source-module : 33.
+
+
+;; Clock -> 2008-09-19, 18h 40m 26s.
+Computing the boundary of the generator 1 (dimension 5) :
+<<AlLp[5 <<AlLp[6 <<AlLp[7 8]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 29s.
+Computing the boundary of the generator 2 (dimension 5) :
+<<AlLp[5 <<AlLp[6 <<AlLp[3 4][4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 29s.
+Computing the boundary of the generator 3 (dimension 5) :
+<<AlLp[5 <<AlLp[6 <<AlLp[4 5][3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 30s.
+Computing the boundary of the generator 4 (dimension 5) :
+<<AlLp[5 <<AlLp[2 <<AlLp[3 4]>>][4 <<AlLp[5 6]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 30s.
+Computing the boundary of the generator 5 (dimension 5) :
+<<AlLp[5 <<AlLp[3 <<AlLp[4 5]>>][3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 30s.
+Computing the boundary of the generator 6 (dimension 5) :
+<<AlLp[5 <<AlLp[4 <<AlLp[5 6]>>][2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 30s.
+Computing the boundary of the generator 7 (dimension 5) :
+<<AlLp[5 <<AlLp[2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 8 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][4 <<AlLp[5 <<AlLp[6 7]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 9 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][4 <<AlLp[5 <<AlLp[3 4][3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 10 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][4 <<AlLp[2 <<AlLp[3 4]>>][3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 11 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][4 <<AlLp[3 <<AlLp[4 5]>>][2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 12 (dimension 5) :
+<<AlLp[2 <<AlLp[3 <<AlLp[4 5]>>]>>][3 <<AlLp[4 <<AlLp[5 6]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 13 (dimension 5) :
+<<AlLp[2 <<AlLp[3 <<AlLp[4 5]>>]>>][3 <<AlLp[2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 14 (dimension 5) :
+<<AlLp[3 <<AlLp[4 <<AlLp[5 6]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 15 (dimension 5) :
+<<AlLp[3 <<AlLp[2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 31s.
+Computing the boundary of the generator 16 (dimension 5) :
+<<AlLp[4 <<AlLp[5 <<AlLp[6 7]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 17 (dimension 5) :
+<<AlLp[4 <<AlLp[5 <<AlLp[3 4][3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 18 (dimension 5) :
+<<AlLp[4 <<AlLp[2 <<AlLp[3 4]>>][3 <<AlLp[4 5]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 19 (dimension 5) :
+<<AlLp[4 <<AlLp[3 <<AlLp[4 5]>>][2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 20 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][3 <<AlLp[4 <<AlLp[5 6]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 21 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][3 <<AlLp[2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 22 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 32s.
+Computing the boundary of the generator 23 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][3 <<AlLp[4 <<AlLp[5 6]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 33s.
+Computing the boundary of the generator 24 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][3 <<AlLp[2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 33s.
+Computing the boundary of the generator 25 (dimension 5) :
+<<AlLp[2 <<AlLp[3 <<AlLp[4 5]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 33s.
+Computing the boundary of the generator 26 (dimension 5) :
+<<AlLp[2 <<AlLp[3 <<AlLp[4 5]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 33s.
+Computing the boundary of the generator 27 (dimension 5) :
+<<AlLp[3 <<AlLp[4 <<AlLp[5 6]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 33s.
+Computing the boundary of the generator 28 (dimension 5) :
+<<AlLp[3 <<AlLp[2 <<AlLp[3 4]>>][2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 34s.
+Computing the boundary of the generator 29 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 34s.
+Computing the boundary of the generator 30 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 34s.
+Computing the boundary of the generator 31 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][2 <<AlLp[3 <<AlLp[4 5]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 34s.
+Computing the boundary of the generator 32 (dimension 5) :
+<<AlLp[2 <<AlLp[3 <<AlLp[4 5]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 40m 34s.
+Computing the boundary of the generator 33 (dimension 5) :
+<<AlLp[1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>][1 <<AlLp[2 <<AlLp[3 4]>>]>>]>> 
+End of computing.
+
+
+========== MATRIX 13 lines + 33 columns =====
+L1=[C1=-2]
+L2=[C1=-1]
+L3=[C1=-4][C2=1][C3=-1][C4=-2]
+L4=[C2=1][C3=-1][C6=2]
+L5=[C1=6][C4=1][C6=1]
+L6=[C1=4][C4=4][C6=4][C7=3]
+L7=[C1=4][C12=-2][C14=2]
+L8=[C1=6][C4=1][C6=1]
+L9=[C1=4][C4=4][C6=4][C7=3]
+L10=[C8=4][C10=1][C11=-1][C14=-4][C15=-2][C20=-2]
+L11=[C1=4][C8=4][C10=1][C11=-1][C16=-4][C18=-1][C19=1][C23=-2]
+L12=[C12=4][C13=2][C16=-4][C18=-1][C19=1][C27=-2]
+L13=[C1=-1][C20=4][C21=2][C23=-4][C24=-2][C27=4][C28=2]
+========== END-MATRIX
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Equivalence of K-Z-2 with a chain-complex of finite type.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF EFHM (EFHM K-Z-2))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K573 Homotopy-Equivalence K29 <= K563 => K559]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; This chain complex.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF FINITE-CC (RBCC EFHM))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K559 Chain-Complex]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Basis up to dimension 5.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(DOTIMES (I 6) (PRINT (BASIS FINITE-CC I)))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+(<<Abar>>) 
+NIL 
+(<<Abar[2 S1]>>) 
+NIL 
+(<<Abar[2 S1][2 S1]>>) 
+NIL NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Generator of H_4(K-Z-2).
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF HCYCLE
+  (LF EFHM (RG EFHM 4
+      (FIRST (BASIS FINITE-CC 4)))))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+----------------------------------------------------------------------{CMBN 4}
+<-1 * <<GBar<1-0 (1)><1-0 NIL><- (1)><- NIL>>>>
+<1 * <<GBar<2-0 (1)><1 (1)><0 NIL><- NIL>>>>
+<-1 * <<GBar<2-1 (1)><0 (1)><0 NIL><- NIL>>>>
+------------------------------------------------------------------------------
+
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Extracting the simplices.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(PROGN (SETF B4
+             (MAPCAR #'CDR (CMBN-LIST HCYCLE)))
+       (MAP NIL #'PRINT B4))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+<<GBar<1-0 (1)><1-0 NIL><- (1)><- NIL>>> 
+<<GBar<2-0 (1)><1 (1)><0 NIL><- NIL>>> 
+<<GBar<2-1 (1)><0 (1)><0 NIL><- NIL>>> NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Examining their faces.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(DOLIST (ITEM B4)
+  (TERPRI)
+  (DOTIMES (I 5) (PRINT (FACE K-Z-2 I 4 ITEM))))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+
+<AbSm 0 <<GBar<- (1)><- NIL>>>> 
+<AbSm 0 <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<0 (1)><- (1)><- NIL>>>> 
+<AbSm 2 <<GBar<- (1)><- NIL>>>> 
+<AbSm 2 <<GBar<- (1)><- NIL>>>> 
+
+<AbSm 1 <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<1 (1)><- (1)><- NIL>>>> 
+<AbSm - <<GBar<0 (1)><- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (1 1)><0 NIL><- NIL>>>> 
+<AbSm 1 <<GBar<- (1)><- NIL>>>> 
+
+<AbSm 2 <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<1 (1)><- (1)><- NIL>>>> 
+<AbSm 1 <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (1 1)><0 NIL><- NIL>>>> 
+<AbSm 0 <<GBar<- (1)><- NIL>>>> NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constituting the list of interesting 3-simplices.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(PROGN
+  (SETF B3 (MAPCAR #'GMSM
+             (LIST (FACE K-Z-2 2 4 (NTH 0 B4))
+                   (FACE K-Z-2 1 4 (NTH 1 B4))
+                   (FACE K-Z-2 3 4 (NTH 1 B4)))))
+  (MAP NIL #'PRINT B3))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+<<GBar<0 (1)><- (1)><- NIL>>> 
+<<GBar<1 (1)><- (1)><- NIL>>> 
+<<GBar<- (1 1)><0 NIL><- NIL>>> NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Examining their faces.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(DOLIST (ITEM B3)
+  (TERPRI)
+  (DOTIMES (I 4) (PRINT (FACE K-Z-2 I 3 ITEM))))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+
+<AbSm 1-0 <<GBar>>> 
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (2)><- NIL>>>> 
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+<AbSm - <<GBar<- (2)><- NIL>>>> 
+<AbSm - <<GBar<- (1)><- NIL>>>> 
+<AbSm 1-0 <<GBar>>> NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constituting the list of interesting 2-simplices.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(PROGN
+  (SETF B2 (MAPCAR #'GMSM
+             (LIST (FACE K-Z-2 0 3 (NTH 0 B3))
+                   (FACE K-Z-2 2 3 (NTH 1 B3)))))
+  (MAP NIL #'PRINT B2))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+<<GBar<- (1)><- NIL>>> 
+<<GBar<- (2)><- NIL>>> NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Examining their faces.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(DOLIST (ITEM B2)
+  (TERPRI)
+  (DOTIMES (I 3) (PRINT (FACE K-Z-2 I 2 ITEM))))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+
+<AbSm 0 <<GBar>>> 
+<AbSm 0 <<GBar>>> 
+<AbSm 0 <<GBar>>> 
+
+<AbSm 0 <<GBar>>> 
+<AbSm 0 <<GBar>>> 
+<AbSm 0 <<GBar>>> NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; We intend to replace the infinite basis of K-Z-2
+;;   by a finite one, in order to construct
+;;   a SUB-SIMPLICIAL SET of FINITE TYPE
+;;   with the SAME HOMOTOPY TYPE.
+;;
+;; Constructing the appropriate BASIS function.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF NEW-BASIS
+  #'(LAMBDA (N)
+      (CASE N
+        (0 (LIST (BSGN K-Z-2)))
+        (2 B2) (3 B3) (4 B4)
+        (OTHERWISE NIL))))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+#<Interpreted Function (unnamed) @ #x20fdef7a>
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Constructing an interesting simplicial set.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(SETF TENTATIVE
+  (BUILD-SMST
+   :CMPR (CMPR K-Z-2)
+   :BASIS NEW-BASIS
+   :BSPN (BSPN K-Z-2)
+   :FACE (FACE K-Z-2)))
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+[K574 Simplicial-Set]
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Verifying the construction is simplicially coherent.
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(CHECK-SMST TENTATIVE 0 5)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+Checking the 0-simplices...
+Checking the 1-simplices...
+Checking the 2-simplices...
+Checking the 3-simplices...
+Checking the 4-simplices...T
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; Homology groups of "TENTATIVE".
+--------------------------------------------------
+> 
+--------------------------------------------------<Lisp Statement>
+(HOMOLOGY TENTATIVE 0 5)
+--------------------------------------------------
+> 
+--------------------------------------------------<Result>
+
+Computing boundary-matrix in dimension 0.
+Rank of the source-module : 1.
+
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+Computing the boundary of the generator 1 (dimension 0) :
+<<GBar>> 
+End of computing.
+
+
+Computing boundary-matrix in dimension 1.
+Rank of the source-module : 0.
+
+
+
+
+Homology in dimension 0 :
+
+
+Component Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+
+
+Computing boundary-matrix in dimension 1.
+Rank of the source-module : 0.
+
+
+Computing boundary-matrix in dimension 2.
+Rank of the source-module : 2.
+
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+Computing the boundary of the generator 1 (dimension 2) :
+<<GBar<- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+Computing the boundary of the generator 2 (dimension 2) :
+<<GBar<- (2)><- NIL>>> 
+End of computing.
+
+
+
+
+Homology in dimension 1 :
+
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+
+
+Computing boundary-matrix in dimension 2.
+Rank of the source-module : 2.
+
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+Computing the boundary of the generator 1 (dimension 2) :
+<<GBar<- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+Computing the boundary of the generator 2 (dimension 2) :
+<<GBar<- (2)><- NIL>>> 
+End of computing.
+
+
+Computing boundary-matrix in dimension 3.
+Rank of the source-module : 3.
+
+
+;; Clock -> 2008-09-19, 18h 41m 52s.
+Computing the boundary of the generator 1 (dimension 3) :
+<<GBar<0 (1)><- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 2 (dimension 3) :
+<<GBar<1 (1)><- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 3 (dimension 3) :
+<<GBar<- (1 1)><0 NIL><- NIL>>> 
+End of computing.
+
+
+
+
+Homology in dimension 2 :
+
+
+Component Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+
+
+Computing boundary-matrix in dimension 3.
+Rank of the source-module : 3.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 1 (dimension 3) :
+<<GBar<0 (1)><- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 2 (dimension 3) :
+<<GBar<1 (1)><- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 3 (dimension 3) :
+<<GBar<- (1 1)><0 NIL><- NIL>>> 
+End of computing.
+
+
+Computing boundary-matrix in dimension 4.
+Rank of the source-module : 3.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 1 (dimension 4) :
+<<GBar<1-0 (1)><1-0 NIL><- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 2 (dimension 4) :
+<<GBar<2-0 (1)><1 (1)><0 NIL><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 3 (dimension 4) :
+<<GBar<2-1 (1)><0 (1)><0 NIL><- NIL>>> 
+End of computing.
+
+
+
+
+Homology in dimension 3 :
+
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+
+
+Computing boundary-matrix in dimension 4.
+Rank of the source-module : 3.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 1 (dimension 4) :
+<<GBar<1-0 (1)><1-0 NIL><- (1)><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 2 (dimension 4) :
+<<GBar<2-0 (1)><1 (1)><0 NIL><- NIL>>> 
+End of computing.
+
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+Computing the boundary of the generator 3 (dimension 4) :
+<<GBar<2-1 (1)><0 (1)><0 NIL><- NIL>>> 
+End of computing.
+
+
+Computing boundary-matrix in dimension 5.
+Rank of the source-module : 0.
+
+
+
+
+Homology in dimension 4 :
+
+
+Component Z
+
+
+---done---
+
+;; Clock -> 2008-09-19, 18h 41m 53s.
+
+NIL
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; The homology groups of "TENTATIVE" are:
+;; {Z 0 Z 0 Z} = Those of K-Z-2.
+;; 
+;; A little more elemetary work proves
+;;   the canonical inclusion:
+;;     TENTATIVE -> K-Z-2
+;; actually is a homotopy equivalence.
+;;
+;; => Model of (P^2 C) with
+;;    (1 0 2 3 3) simplices.
+--------------------------------------------------
+> 
+--------------------------------------------------<Comment>
+;; +-----------+
+;; |           |
+;; |  The END. |
+;; |           |
+;; +-----------+
+--------------------------------------------------
+> 

@@ -1,0 +1,90 @@
+.title{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#003366;
+	font-size:16px;
+	font-weight:bold;
+}
+
+.body{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#003366;
+	font-size:12px;
+}
+.lbody:LINK{
+	color:#003366;
+	text-decoration:underline;
+}
+.lbody:VISITED{
+	color:#003366;
+	text-decoration:underline;
+}
+.lbody:HOVER{
+	color:#003366;
+	text-decoration:underline;
+}
+.lbody:ACTIVE{
+	color:#003366;
+	text-decoration:underline;
+}
+
+.lnone:LINK{
+	color:#003366;
+	text-decoration:none;
+}
+.lnone:VISITED{
+	color:#003366;
+	text-decoration:none;
+}
+.lnone:HOVER{
+	color:#003366;
+	text-decoration:underline;
+}
+.lnone:ACTIVE{
+	color:#003366;
+	text-decoration:none;
+}
+
+.menu{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	color:#FFFFFF;
+	font-size:12px;
+}
+.lmenu:LINK{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.lmenu:VISITED{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+.lmenu:HOVER{
+	color:#FFFFFF;
+	text-decoration:underline;
+}
+.lmenu:ACTIVE{
+	color:#FFFFFF;
+	text-decoration:none;
+}
+
+.input{
+	width:99%;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.button{
+	width:80;
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+}
+
+.message{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:9px;
+	color:#666666;
+}
+
+.table_head{
+	font-family:Verdana, Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#FFFFFF;
+	background-color:#003366;
+}

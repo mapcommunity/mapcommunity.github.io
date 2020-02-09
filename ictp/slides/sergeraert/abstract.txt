@@ -1,0 +1,36 @@
+
+
+<p>Kadeishvilis's lecture of this Summer School is devoted to Operadic
+Algebraic  Topology, the  modern  style of  Algebraic Topology,  which
+simultaneously  encompasses  the  most important  current  homological
+theories and also  satisfies the constructiveness requirement. Operads
+are very rich algebraic  or topological structures describing the deep
+homological and homotopical natures  of some object. A striking result
+due to Michael  Mandell explains such a description  is complete, in a
+natural sense.</p>
+
+<p>Combinatorial  homotopy is a  necessary prerequisite  to understand
+the nature of the topological  operadic theories and is the subject of
+this  lecture.    Ordinary  homotopy  theory  seems   having  a  quite
+topological  nature  but  it is  not  so  hard  to  describe it  in  a
+combinatorial framework, and this  illustrates the power of simplicial
+techniques,  the main tool  for efficient  operadic methods,  the main
+tool also  for combinatorial topology  in general. It is  essential to
+understand the difference between  the notion of simplicial *complex*,
+elementary but  too weak  for actual applications,  and the  notion of
+simplicial  *set*, much  more  complex (!),  but  very powerful.   The
+audience of  this lecture could usefully  use Sections 3 and  4 of the
+lecture  notes   [1]  as  an  introduction   to  this...  introductory
+lecture.</p>
+
+<p>1. The simplicial Lego.</p>
+
+<p>2. Simplicial homology.</p>
+
+<p>2.   Constructing   sophisticated   objects   in   the   simplicial
+framework.</p>
+
+<p>3. Functional spaces in the simplicial framework.</p>
+
+<p>[1]
+http://www-fourier.ujf-grenoble.fr/~sergerar/Papers/CWSS.pdf</p>

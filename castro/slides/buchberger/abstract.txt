@@ -1,0 +1,6 @@
+Title:  Symbolic Computation: Self-application of Algorithmic Mathematics
+Author: Bruno Buchberger
+
+Abstract:
+
+We explain our view that mathematics, in some sense, is essentially symbolic computation. In recent years, with the advent of modern computer technology, this view becomes more and more concrete: Mathematics is always pursued, at the same time, at the object level (exploring mathematical theories) and on the meta-level (observing how theory exploration can be systematized and, maybe, made algorithmic).  In the talk we give four examples of techniques used in current systems, like Theorema, for the automation of mathematical theory exploration: computation and proving within the same logic system; the reduction of logical proving to solving in algebraic domains; the use of formula schemes for the invention of definitions, propositions, problems, and algorithms;  and the automated generation of conjectures  from failing proofs. We finally draw some conclusions about how such systems will change the way how we do mathematical research, how we review, assess, store, and retrieve mathematical knowledge, how we teach, and how we apply mathematics.

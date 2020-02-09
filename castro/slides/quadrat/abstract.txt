@@ -1,0 +1,2 @@
+The purpose of this tutorial is to give a short introduction to  control theory (transfer functions/matrices, internal/strong/simultaneous/robust  stabilization, parametrization of all stabilizing controllers, optimization problems) within an algebraic analysis approach  (fractional ideals, lattices, module theory,
+homological algebra, Banach algebras).

@@ -1,0 +1,24 @@
+
+<p>The  method of  Algebraic Topology  is to  assign to  a topological
+space certain algebraic models.  But stepping from complex geometrical
+object to its algebraic model,  one loses part of information. That is
+why  most  models are  not  complete  invariants:  the isomorphism  of
+invariants does not guarantee  the equivalence of spaces.  Models with
+richer algebraic structures contain  more information about the space.
+For example  the invariant "cohomology  algebra" distinguishes spaces,
+which can  not be distinguished by the  invariant "cohomology groups".
+During the  development of Algebraic Topology many  new cohomology and
+cochain  operations were invented  in order  to get  reacher algebraic
+models.   The language  of  operads is  a  good tool  to handle  these
+algebraic objects with huge  and complex algebraic structures. The aim
+of  these  lectures is  to  present  these  structures using  operadic
+technics.</p>
+
+<p>The following  topics are  planned to discuss:  Differential graded
+algebras,   bialgebras,  Lie  algebras,   cup  product   and  Steenrod
+operations,  Bar   and  Cobar  constructions,   A_\infty-,  B_\infty-,
+C_\infty-,  L_\infty-algebras,  differential  graded operads,  operads
+defining the  above mentioned algebras,  E_\infty operads. Topological
+applications:  C_\infty-algebra   structure  in  cohomology   and  the
+rational  homotopy type, E_\infty-algebra  structure and  the homotopy
+type.</p>

@@ -1,0 +1,16 @@
+Symbolic Computation of A_\infty-structures:
+(Abstract)
+
+In the framework of Effective Algebraic Topology, we are interested in the computation 
+of A-infinity structures.
+
+In this poster, we would like to show wich type of pitfalls we had to solve.
+
+Thanks to the basic perturbation lemma and the tensor trick, from theorical 
+viewpoint it is possible to obtain the morphisms involved in such structures 
+ with the help of a computer.
+
+But the problems appear when we translate this mathematical notion to computational world. 
+
+For short, only two specific problems are explained in this poster: how to solve infinite loops and 
+the extension of class family!

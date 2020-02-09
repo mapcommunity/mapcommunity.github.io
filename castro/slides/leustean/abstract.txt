@@ -1,0 +1,1 @@
+We present another case study in the general project of proof mining in functional analysis, developed by Kohlenbach. Thus, we obtain a quadratic bound on the rate of asymptotic regularity for the Krasnoselski-Mann iterations of nonexpansive mappings in CAT(0)-spaces, whereas previous results guarantee only exponential bounds. 

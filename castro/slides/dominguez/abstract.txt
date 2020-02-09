@@ -1,0 +1,16 @@
+Title: Diagrammatic Specifications of Symbolic Computation Systems
+
+Authors: C. Domínguez, D. Duval, L. Lambán and J. Rubio
+
+Abstract
+
+The aim of this work is to describe the current state of an ongoing
+project to formalize, within the framework of diagrammatic logic
+(due to Dominique Duval and Christian Lair) some data structures
+appearing in Sergeraert's symbolic computation systems Kenzo and
+EAT. In a previous work, we gave some hints on the reason why a
+key construction (called imp construction) in the specification
+of the systems can be understood as a freely generating functor
+between suitable categories of diagrammatic realizations. Now, we
+will focus on the new  open lines, giving a few details on the
+problems we have encountered up to now.

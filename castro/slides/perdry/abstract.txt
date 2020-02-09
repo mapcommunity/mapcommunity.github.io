@@ -1,0 +1,4 @@
+We present a new possible definition for a constructive treatment 
+of Noetherian Rings: the Fan-Noetherian rings; and a meta-theorem
+on the conditions on a poset which are well suited to provide a
+constructive theory for Noetherian Rings.

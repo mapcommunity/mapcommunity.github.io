@@ -1,0 +1,27 @@
+
+<p> Locale theory and formal  topology are two largely equivalent ways
+of studying  spaces in  terms of their  complete lattice of  open sets
+rather than in terms of their  points. This has many advantages from a
+constructive  point  of view.   More  information  about a  continuous
+function's  behaviour can be  encoded than  if merely  considering its
+action  on points. Point-free  topology seems  so far  to be  the most
+successful way  of doing general topology constructively  in the sense
+of Bishop's constructive  mathematics. A main goal of  our lectures is
+to relate formal topology to the standard theory of metric spaces, and
+show how it  also in this case improves the  notions.  We present some
+recent developments.</p>
+
+<p> Topics covered in the lectures:</p>
+
+<p>1. Locales and formal topology.</p>
+
+<p>2.   Inductively    generated   covers.   Compactness.   Separation
+properties.</p>
+
+<p>3. Limits and colimits in formal topology. Subspaces.  Overt formal
+   spaces.</p>
+
+<p>4.   Predicativity   problems  in   formal   topology.  Issues   of
+formalisation.</p>
+
+<p>5. Localic completion of metric spaces.</p>

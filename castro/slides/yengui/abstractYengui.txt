@@ -1,0 +1,5 @@
+In my talk I present some new algorithms for unimodular completion over multivariate polynomial
+ rings with coefficients in an
+infinite fields and or a Noetherian ring containing an infinite field and in which Gröbner bases
+can be computed. I also show how such
+algorithms are important in signal processing.

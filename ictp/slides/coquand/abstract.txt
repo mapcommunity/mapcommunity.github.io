@@ -1,0 +1,26 @@
+
+<p> The goal  of these lectures is to be an  introduction to the other
+lectures on  constructive algebra and  formal topology. Also,  I would
+like to  introduce the "Kronecker-Duval philosophy"  (used in computer
+algebra) from the logical point of view.</p>
+
+<p>  Lectures  1  and  2: Hilbert's  program,  completeness  theorems,
+cut-elimination, negative translation, coherent logic.</p>
+
+<p>  Lecture 3:  Point-free presentation  of spectral  spaces, Joyal's
+representation  of   Zariski  spectrum,  boundary,   Krull  dimension,
+local-global principles.</p>
+
+<p> Lecture 4: Example of Prufer ring, as a constructive approximation of Dedekind rings.</p>
+
+<p>References: most of them are available at:</p>
+
+<p>hlombardi.free.fr/publis/PublisRecherche.html </p>
+
+<p> -Dynamical method in algebra: effective Nullstellensatze</p>
+
+<p> -An elementary characterization of Krull dimension</p>
+
+<p> -A logical approach to abstract algebra</p>
+
+<p> -Theorie algorithmique des  anneaux arithmetiques, de Prufer et de Dedekind</p>

@@ -1,0 +1,11 @@
+It is folklore that if a continuous equation has approximate solutions
+and - in a quantitative manner - at most one solution, then it has a
+(of course, uniquely determined) exact solution. I first review the
+standard ways to validate this heuristic principle both in classical
+mathematics and in constructive mathematics with countable choice, and
+then indicate how this can be carried over to the choice-free way of
+doing completions put forward by Mulvey, Stolzenberg, Richman, et
+al. Moreover, I sketch how the crucial "at most one" hypothesis can be
+obtained, by invoking Brouwer's fan theorem, from appropriate preconditions 
+of a qualitative nature. In fact, the fan theorem is equivalent to the 
+general validity of the implication from the qualitative to the quantitative uniqueness condition for continuous functions on a compact metric space. 

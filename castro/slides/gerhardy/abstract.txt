@@ -1,0 +1,5 @@
+Based on finite cases of the double-negation shift, essentially
+iterations of "(not not A & not not B) -> not not (A &B)", we compare
+the functional interpretation of the full double-negation shift using
+Spector's bar-recursion with the modified realizability of the full
+double-negation shift.

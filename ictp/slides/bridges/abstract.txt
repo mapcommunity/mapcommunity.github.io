@@ -1,0 +1,21 @@
+
+<p>These lectures  will cover a  wide range of topics  in constructive
+real  and functional  analysis; they  will be  based primarily  on the
+reference [1].   Beginning with  a brief introduction  to constructive
+thinking  and  informal  intuitionistic   logic,  I  will  present  an
+interval-arithmetic development  of the real line,  together with some
+basic real analysis. We will then deal with the constructive theory of
+metric,  normed,  and  Hilbert  spaces.   This will  lead  us  to  the
+separation and Hahn-Banach theorems, which will be use to characterise
+linear  functionals on  the dual  space and  on the  space  of bounded
+operators on a  Hilbert space.  The final part  of the analysis proper
+will  deal with  the existence  of adjoints,  locating the  kernel and
+range  of  an  operator,   and  applications  of  Baire’s  theorem  in
+functional analysis.  If  time permits, I will discuss  recent work on
+the role  of Brouwer’s fan theorem  in analysis, part of  a project on
+constructive reverse mathematics.</p>
+
+<p>Reference.</p>
+
+<p>[1]  D.S.   Bridges  and  L.S.  Vita,  Techniques  of  Constructive
+Analysis, Universitext, Springer-New-York, 2006.</p>

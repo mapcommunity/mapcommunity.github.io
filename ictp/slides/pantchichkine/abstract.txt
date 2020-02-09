@@ -1,0 +1,36 @@
+
+
+<p> We discuss  the use of the motivic L-functions  in arithmetic as a
+computational  tool  and  as   a  mean  of  proving  some  fundamental
+theoretical results.</p>
+
+<p>1.  Classical L-functions.  Dirichlet's class  number  formula. The
+Kubota   and    Leopoldt   p-adic   L-functions    and   the   Iwasawa
+theory.   L-functions    of   a    global   field   of    a   positive
+characteristic. Examples of the use of L-functions.</p>
+
+<p>2.  Local  and  global   methods  in  arithmetic.   The  Birch  and
+Swinnerton-Dyer Conjecture. Constructing  rational points from complex
+and  p-adic  L-functions.  Fermat's  Last  Theorem  and Modularity  of
+Elliptic Curves  (see William Stein,  `An Explicit Approach  to Number
+Theory'. Lecture notes available at:</p>
+
+<p>http://modular.fas.harvard.edu/edu/Fall2001/124/lectures/lectures_all/lectures.pdf</p>
+
+<p>3.   Motivic   L  functions   and   Galois  representations.   Weil
+conjectures.  Complex  and p-adic L-functions attached  to motives and
+their use. Automorphic L-functions and Artin's Conjecture.</p>
+
+<p>4.  Modular forms  and  congruences. Deformation  theory of  Galois
+representations  and families  of modular  forms. Applications  to the
+proof of  Serre's Modularity Conjectures  (Khare-Wintenberger-Kisin et
+al., 2007). References:</p>
+
+<p>http://en.wikipedia.org/wiki/Serre_conjecture_%28number_theory%29</p>
+
+<p>http://www.math.utah.edu/~shekhar/papers.html</p>
+
+<p>The relation to the proof of the Sato-Tate Conjecture (2006).  (see
+Manin  Yu.I.   and Panchishkin  A.A.,  Introduction  to Modern  Number
+Theory,  Encyclopaedia of  Mathematical Sciences,  vol. 49  (2nd ed.),
+Second printing Springer-Verlag, 2007, 514 p).</p>

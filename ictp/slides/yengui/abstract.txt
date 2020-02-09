@@ -1,0 +1,49 @@
+
+<p>In my course  I will try to approach  constructively the problem of
+projective  modules   over  polynomial  rings   originally  raised  by
+J.-P. Serre in 1955.</p>
+
+<p>Serre remarked that  it was not known whether  there exist finitely
+generated projective  modules over multivariate  polynomial rings with
+coeffcients in  a field, which are  not free. This  remark turned into
+the  "Serre's conjecture"  or "Serre's  problem", stating  that indeed
+there were no  such modules.  Proven independently by  D.  Quillen and
+A.   A.   Suslin  in  1976,   it  became  subsequently  known  as  the
+Quillen-Suslin theorem.  In my  course I will give constructive proofs
+of Quillen  and Suslin proofs  of Serre's conjecture, simple  and con-
+structive  proofs of  some subsequent  developments in  the  theory of
+projective modules over  polynomial rings, and also I  will cast light
+on a new  progress very recently obtained concerning  the Hermite ring
+Conjecture.</p>
+
+<p>My course will be divided into four parts.</p>
+
+<p>1. Constructive  theory of  projective modules, Quillen's  proof of
+Serre's  conjecture,  notably  Quillen's patching  theorem,  Horrocks'
+theorem, Quillen's induction theorem.</p>
+
+<p>2.  Suslin's proof  of  Serre's conjecture,  a  general method  for
+making  the  use  of  maximal  ideals  constructive,  the  theorem  of
+Traverso-Swan- Coquand about seminormality.</p>
+
+<p>3. Constructive theory of arithmetical rings, constructive compari-
+son  between  the   rings  R(X)  and  R<X>  and   application  to  the
+Lequain-Simis   induction  theorem,  a   constructive  proof   of  the
+Lequain-Simis-Vasconcelos theorem asserting  that for any arithmetical
+ring  R, all  finitely generated  projective  R[X1,...,Xn]-modules are
+extended from R.</p>
+
+<p>4. A  new progress concerning  the long-standing Hermite  ring Con-
+jecture (1972)  asserting that if R  is an Hermite ring  (that is, all
+finitely generated stably free R-modules are free) then so is R[X]. Of
+course, a positive  solution to this conjecture will  imply a positive
+solution to the famous  Bass-Quillen Conjecture (1976) saying that for
+any  local   regular  ring   R,  all  finitely   generated  projective
+R[X]-modules  are free. We  will prove  (constructively) that  for any
+ring R  with Krull dimension <  2, R[X] is an  Hermite ring. Moreover,
+the  corresponding completion  of unimodular  rows can  be  done using
+elementary matrices (instead of  invertible matrices). In other words,
+we will prove that for any ring R  with Krull dimension < 2 and n > 2,
+any unimodular  vector in R[X]^n  can be completed into  an elementary
+matrice in  R[X]^(nxn). We will also  discuss possible generalizations
+of this result and some new open questions that it raises.</p>

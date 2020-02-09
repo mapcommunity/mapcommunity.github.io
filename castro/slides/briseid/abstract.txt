@@ -1,0 +1,1 @@
+We present quantitative versions of some fixed point theorems for contractive type mappings on metric spaces. These are derived with the help of insights and techniques from proof mining. In one case our version is also a qualitative improvement compared to known theorems.

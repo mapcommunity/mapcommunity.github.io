@@ -1,0 +1,10 @@
+
+<p> The lectures give an  introduction to computer algebra methods for
+handling  summation problems  arising in  areas like  combinatorics or
+special  functions.   After  an  introductory survey,  topics  treated
+include:   rational  summation,   hypergeometric   summation  (Gosper,
+Zeilberger), and algorithms  for simplifying (multiple) binomial sums.
+Special emphasis  is put in concrete examples.   Packages developed at
+the Research  Institute for Symbolic Computation (RISC)  will be shown
+in action.</p>
+
